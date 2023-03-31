@@ -20,6 +20,7 @@ class ChantsViewController: UIViewController {
         tv.register(TeamTableViewCell.self, forCellReuseIdentifier: TeamTableViewCell.cellId)
     return tv
     }()
+    private lazy var teamsViewMOdel = TeamsViewModel()
     //MARK: - Lifecycle
     
     override func loadView(){
@@ -28,18 +29,22 @@ class ChantsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .darkGray
+        self.view.backgroundColor = .white
     }
     
 
 }
 extension ChantsViewController{
     func setup(){
+        self.navigationController?.navigationBar.topItem?.title = "Premier Lig"
+        self.navigationController?.navigationBar.backgroundColor = .white
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
         self.view.addSubview(tableVw)
         tableVw.dataSource = self
         NSLayoutConstraint.activate([
             tableVw.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            tableVw.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+            tableVw.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             tableVw.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             tableVw.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
         ])
@@ -48,12 +53,13 @@ extension ChantsViewController{
 
 extension ChantsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return teamsViewMOdel.teams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let team = teamsViewMOdel.teams[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cellId, for: indexPath) as! TeamTableViewCell
-        cell.configure()
+        cell.configure(team)
         return cell
         
     }

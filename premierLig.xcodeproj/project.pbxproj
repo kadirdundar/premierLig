@@ -37,6 +37,7 @@
 		3F7395EE29CE4923002D0BFB /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7395DA29CE4923002D0BFB /* Teams.swift */; };
 		3F7395F029CE494F002D0BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7395EF29CE494F002D0BFB /* Assets.xcassets */; };
 		3F7395F329CE525B002D0BFB /* ChantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7395F229CE525B002D0BFB /* ChantsViewController.swift */; };
+		3F9CA55629D5CB2300567247 /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CA55529D5CB2300567247 /* assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		3F7395DA29CE4923002D0BFB /* Teams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		3F7395EF29CE494F002D0BFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F7395F229CE525B002D0BFB /* ChantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChantsViewController.swift; sourceTree = "<group>"; };
+		3F9CA55529D5CB2300567247 /* assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				3F7395C629CE4923002D0BFB /* Chants */,
 				3F7395DA29CE4923002D0BFB /* Teams.swift */,
+				3F9CA55529D5CB2300567247 /* assets.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				3F7395F329CE525B002D0BFB /* ChantsViewController.swift in Sources */,
 				3F355D0829CF2D4000680BFF /* TeamsViewModel.swift in Sources */,
 				3F355D0529CF2BF200680BFF /* Manager.swift in Sources */,
+				3F9CA55629D5CB2300567247 /* assets.swift in Sources */,
 				3F7395EE29CE4923002D0BFB /* Teams.swift in Sources */,
 				3F355D0B29CF4FA200680BFF /* TeamTableViewCell.swift in Sources */,
 				3F4562D629CDBBB60077C494 /* AppDelegate.swift in Sources */,

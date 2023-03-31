@@ -73,14 +73,15 @@ class TeamTableViewCell: UITableViewCell {
         super.layoutSubviews()
         containerWv.layer.cornerRadius = 10
     }
-    func configure(){
-        contentView.backgroundColor = TeamType.arsenal.background
-        badgeImageVw.image = TeamType.arsenal.badge
-        button.setImage(UIImage(systemName: "play.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32)),for : .normal)
-        nameLbl.text = "Arsenal"
-        foundLbl.text = "1880"
-        jobLbl.text = "current manager: mikel"
-        infoLbl.text = "bilgi satırı bilgi bilgi"
+    func configure(_ team : Team){
+        containerWv.backgroundColor = team.id.background
+        badgeImageVw.image = team.id.badge
+        
+        button.setImage(team.isPlaying ? assets.pause : assets.play,for : .normal)//eğer true ise birinci olasılık değilse ikinci
+        nameLbl.text = team.name
+        foundLbl.text = team.founded
+        jobLbl.text = "current \(team.manager.job.rawValue) \(team.manager.name)"
+        infoLbl.text = team.info
         
         self.contentView.addSubview(containerWv)
         
